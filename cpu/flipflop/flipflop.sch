@@ -1,0 +1,246 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R_Small R1
+U 1 1 6132B538
+P 2950 3250
+F 0 "R1" H 3009 3296 50  0000 L CNN
+F 1 "1k" H 3009 3205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2950 3250 50  0001 C CNN
+F 3 "~" H 2950 3250 50  0001 C CNN
+	1    2950 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 6132BDA4
+P 4450 3250
+F 0 "R2" H 4509 3296 50  0000 L CNN
+F 1 "1k" H 4509 3205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4450 3250 50  0001 C CNN
+F 3 "~" H 4450 3250 50  0001 C CNN
+	1    4450 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BCX56 Q1
+U 1 1 6132F590
+P 3050 4000
+F 0 "Q1" H 3241 4046 50  0000 L CNN
+F 1 "BCX56" H 3241 3955 50  0000 L BNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3250 3925 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 3050 4000 50  0001 L CNN
+	1    3050 4000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3800 2950 3800
+Wire Wire Line
+	3800 4000 3550 3800
+Wire Wire Line
+	3550 3800 3400 3800
+Wire Wire Line
+	3600 4000 3800 3800
+Wire Wire Line
+	3800 3800 4050 3800
+Wire Wire Line
+	4250 3800 4450 3800
+Wire Wire Line
+	2950 3150 2950 3000
+Wire Wire Line
+	4450 3000 4450 3150
+Wire Wire Line
+	2950 4400 3550 4400
+$Comp
+L Device:LED D1
+U 1 1 61370CA3
+P 2550 4000
+F 0 "D1" V 2589 3882 50  0000 L CNN
+F 1 "LED RED" V 2498 3882 50  0000 L CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 2550 4000 50  0001 C CNN
+F 3 "~" H 2550 4000 50  0001 C CNN
+	1    2550 4000
+	0    -1   -1   0   
+$EndComp
+Connection ~ 2950 3800
+$Comp
+L Device:LED D2
+U 1 1 6137464C
+P 4850 4000
+F 0 "D2" V 4889 3882 50  0000 R CNN
+F 1 "LED GREEN" V 4798 3882 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 4850 4000 50  0001 C CNN
+F 3 "~" H 4850 4000 50  0001 C CNN
+	1    4850 4000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3250 4000 3550 4000
+Wire Wire Line
+	2950 3000 4450 3000
+Connection ~ 4450 3800
+$Comp
+L Transistor_BJT:BC547 Q2
+U 1 1 613414A9
+P 4350 4000
+F 0 "Q2" H 4541 4046 50  0000 L CNN
+F 1 "BC547" H 4541 3955 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4550 3925 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 4350 4000 50  0001 L CNN
+	1    4350 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 3350 2950 3800
+Wire Wire Line
+	4450 3350 4450 3800
+$Comp
+L Device:R_Small R3
+U 1 1 61354E2A
+P 3300 3800
+F 0 "R3" V 3104 3800 50  0000 C CNN
+F 1 "10k" V 3195 3800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3300 3800 50  0001 C CNN
+F 3 "~" H 3300 3800 50  0001 C CNN
+	1    3300 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 613562C9
+P 4150 3800
+F 0 "R4" V 3954 3800 50  0000 C CNN
+F 1 "10k" V 4045 3800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4150 3800 50  0001 C CNN
+F 3 "~" H 4150 3800 50  0001 C CNN
+	1    4150 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 61358BF4
+P 3550 4200
+F 0 "SW1" H 3596 4152 50  0001 C CNN
+F 1 "S" H 3505 4152 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x02_P1.00mm_Vertical" H 3550 4400 50  0001 C CNN
+F 3 "~" H 3550 4400 50  0001 C CNN
+	1    3550 4200
+	0    -1   -1   0   
+$EndComp
+Connection ~ 3550 4000
+Wire Wire Line
+	3550 4000 3600 4000
+$Comp
+L Switch:SW_Push SW2
+U 1 1 613642FD
+P 3850 4200
+F 0 "SW2" H 3804 4348 50  0001 L CNN
+F 1 "R" H 3895 4348 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x02_P1.00mm_Vertical" H 3850 4400 50  0001 C CNN
+F 3 "~" H 3850 4400 50  0001 C CNN
+	1    3850 4200
+	0    1    -1   0   
+$EndComp
+Connection ~ 3550 4400
+Wire Wire Line
+	3550 4400 3850 4400
+Connection ~ 3850 4400
+Wire Wire Line
+	3850 4400 4450 4400
+Wire Wire Line
+	4450 4200 4450 4400
+Wire Wire Line
+	2950 4200 2950 4400
+$Comp
+L Device:R_Small R6
+U 1 1 6137892F
+P 4650 4400
+F 0 "R6" V 4454 4400 50  0000 C CNN
+F 1 "10k" V 4545 4400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4650 4400 50  0001 C CNN
+F 3 "~" H 4650 4400 50  0001 C CNN
+	1    4650 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 61378FD4
+P 2750 4400
+F 0 "R5" V 2554 4400 50  0000 C CNN
+F 1 "10k" V 2645 4400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2750 4400 50  0001 C CNN
+F 3 "~" H 2750 4400 50  0001 C CNN
+	1    2750 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4450 3850 4450 3800
+Wire Wire Line
+	4450 3800 4850 3800
+Wire Wire Line
+	4850 3800 4850 3850
+Wire Wire Line
+	4850 4150 4850 4400
+Wire Wire Line
+	4850 4400 4750 4400
+Wire Wire Line
+	4550 4400 4450 4400
+Connection ~ 4450 4400
+Wire Wire Line
+	2950 4400 2850 4400
+Connection ~ 2950 4400
+Wire Wire Line
+	2650 4400 2550 4400
+Wire Wire Line
+	2550 4400 2550 4150
+Wire Wire Line
+	2550 3850 2550 3800
+Wire Wire Line
+	2550 3800 2950 3800
+Wire Wire Line
+	3800 4000 3850 4000
+Connection ~ 3850 4000
+Wire Wire Line
+	3850 4000 4150 4000
+$Comp
+L power:+5V #PWR0101
+U 1 1 613AEE20
+P 4950 3000
+F 0 "#PWR0101" H 4950 2850 50  0001 C CNN
+F 1 "+5V" V 4965 3128 50  0000 L CNN
+F 2 "" H 4950 3000 50  0001 C CNN
+F 3 "" H 4950 3000 50  0001 C CNN
+	1    4950 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 3000 4450 3000
+Connection ~ 4450 3000
+$Comp
+L power:-5V #PWR0102
+U 1 1 613B1139
+P 4950 4400
+F 0 "#PWR0102" H 4950 4275 50  0001 C CNN
+F 1 "-5V" V 4965 4528 50  0000 L CNN
+F 2 "" H 4950 4400 50  0001 C CNN
+F 3 "" H 4950 4400 50  0001 C CNN
+	1    4950 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 4400 4850 4400
+Connection ~ 4850 4400
+$EndSCHEMATC
